@@ -6,7 +6,7 @@ export default class Listado extends Component {
     render() {
         return (
             <div className="gastos-realizados">
-               <h2> Listado </h2>
+               <h2>Listado </h2>
                   {Object.keys(this.props.gastos).map(key => (
                        <Gasto
                             key={key}

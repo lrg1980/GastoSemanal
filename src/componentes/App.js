@@ -34,11 +34,10 @@ class App extends Component {
           <div className="contenido-principal contenido">
             <div className="row">
               <div className="one-half column">
-              <Formulario agregarGasto={this.agregarGasto}/>
+                <Formulario agregarGasto={this.agregarGasto}/>
               </div>
               <div className="one-half column">
-              <Listado gastos={this.state.gastos} />
-              <Gasto />
+                <Listado gastos={this.state.gastos} />
               </div>
             </div>
           </div>
