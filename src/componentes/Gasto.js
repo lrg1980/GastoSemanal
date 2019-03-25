@@ -1,4 +1,5 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Gasto extends Component {
 
@@ -15,4 +16,8 @@ export default class Gasto extends Component {
 
           )
     }
+}
+
+Gasto.propTypes = {
+     gasto: PropTypes.object.isRequired
 }
