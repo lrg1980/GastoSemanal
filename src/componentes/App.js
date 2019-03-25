@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Formulario from './Formulario';
 import Listado from './Listado';
+import ControlPresupuesto from './ControlPresupuesto';
 import { validarPresupuesto } from '../helper';
 import '../css/App.css';
 
@@ -60,7 +61,8 @@ class App extends Component {
                 <Formulario agregarGasto={this.agregarGasto}/>
               </div>
               <div className="one-half column">
-                <Listado gastos={this.state.gastos} />
+              <Listado gastos={this.state.gastos} />
+              <ControlPresupuesto />
               </div>
             </div>
           </div>
