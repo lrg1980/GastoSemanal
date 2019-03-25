@@ -7,8 +7,8 @@ export default class Presupuesto extends Component {
 
           return (
 
-               <div>
-               Desde Presupuesto!
+               <div className="alert alert-primary">
+                    Presupuesto: $ {this.props.presupuesto}
                </div>
           )
      }

@@ -62,7 +62,9 @@ class App extends Component {
               </div>
               <div className="one-half column">
               <Listado gastos={this.state.gastos} />
-              <ControlPresupuesto />
+              <ControlPresupuesto
+                presupuesto={this.state.presupuesto}
+                restante={this.state.restante}/>
               </div>
             </div>
           </div>
