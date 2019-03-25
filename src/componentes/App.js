@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Formulario from './Formulario';
 import Listado from './Listado';
-import Gasto from './Gasto';
+import { validarPresupuesto } from '../helper';
 import '../css/App.css';
 
 class App extends Component {
@@ -13,6 +13,29 @@ class App extends Component {
     gastos: {}
 
   }
+
+  componentDidMount() {
+    this.nombre();
+    this.obtenerPresupuesto();
+  }
+  nombre = () => {
+    let nombre = prompt('¿Cual es tu nombre?');
+    console.log(nombre);
+  }
+  obtenerPresupuesto = () => {
+    let presupuesto = prompt('¿Cual es el presupuesto semanal?');
+    
+    let resultado = validarPresupuesto(presupuesto);
+    if (resultado) {
+      this.setState({
+        presupuesto: presupuesto,
+        restante: presupuesto
+      })
+    } else {
+      this.obtenerPresupuesto();
+    }
+  }
+  
   // Agregar un nuevo gasto al state
   agregarGasto = gasto => {
     // Tomar una copia del state actual
