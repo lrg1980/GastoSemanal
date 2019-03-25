@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Formulario from './Formulario';
+import Listado from './Listado';
 import '../css/App.css';
 
 class App extends Component {
@@ -35,12 +36,11 @@ class App extends Component {
               <Formulario agregarGasto={this.agregarGasto}/>
               </div>
               <div className="one-half column">
-              2 
+              <Listado gastos={this.state.gastos}/>
               </div>
             </div>
           </div>
         </div> 
-
     );
   }
 }
